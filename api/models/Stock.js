@@ -8,7 +8,7 @@
 module.exports = {
 
   attributes: {
-    price: {
+    current_price: {
       type: 'float'
     },
 
@@ -38,6 +38,7 @@ module.exports = {
     }
 
   }
+
 
 };
 
