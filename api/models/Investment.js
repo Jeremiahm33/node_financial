@@ -35,12 +35,12 @@ module.exports = {
     },
 
     recent_value: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     acquired_value: {
-      type: 'string',
+      type: 'float',
       required: true
     }
 

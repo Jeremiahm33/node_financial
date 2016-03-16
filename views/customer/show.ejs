@@ -7,23 +7,26 @@
 <h3>Stocks</h3>
 <table>
   <tr>
-    <th>Symbol</th>
-    <th>Name</th>
+    <th width="50px">Symbol</th>
+    <th width="180px">Name</th>
+    <th>Purchase Price</th>
     <th>Number of Shares</th>
     <th>Date of Purchase</th>
     <th>Current Price</th>
-    <th></th>
+    <th>Profit/Loss Margin</th>
     <th></th>
     <th></th>
   </tr>
   <% _.each(customer.stocks, function(stock) { %>
   <tr data-id="<%= stock.id %>" data-model="stock" >
-    <td><%= stock.symbol %></td>
-    <td><%= stock.name %></td>
-    <td><%= stock.number_of_shares %></td>
-    <td><%= stock.date_purchased %></td>
-    <td><%= stock.current_price %></td>
-    <td><a href="/stock/edit/<%= stock.id %>">Edit</a></td>
+    <td width="50"><%= stock.symbol %></td>
+    <td width="180px"><%= stock.name %></td>
+    <td width="120px"><%= stock.price %></td>
+    <td width="100px"><%= stock.number_of_shares %></td>
+    <td width="100px"><%= stock.date_purchased %></td>
+    <td width="75px"><%= stock.current_price %></td>
+    <td width="105px"><%= Math.round(((stock.profit = stock.current_price - stock.price)+ .00001)*100) /100%></td>
+    <td><a href="/stock/edit/<%= stock.id %>">Edit/</a></td>
     <td><a href="/stock/destroy/<%= stock.id %>">Delete</a></td>
   </tr>
   <% }) %>
@@ -38,7 +41,7 @@
     <th>Acquired Date</th>
     <th>Recent Value</th>
     <th>Recent Date</th>
-    <td></td>
+    <th>Profit/Loss Margin</th>
   </tr>
   <% _.each(customer.investments, function(investment) { %>
   <tr data-id="<%= investment.id %>" data-model="investment" >
@@ -48,8 +51,9 @@
     <td><%= investment.acquired_date%></td>
     <td><%= investment.recent_value %></td>
     <td><%= investment.recent_date%></td>
+    <td><%= Math.round(((investment.profit = investment.recent_value - investment.acquired_value)+ .00001)*100) /100%></td>
     <td></td>
-    <td><a href="/investment/edit/<%= investment.id %>">Edit</a></td>
+    <td><a href="/investment/edit/<%= investment.id %>">Edit/</a></td>
     <td><a href="/investment/destroy/<%= investment.id %>">Delete</a></td>
   </tr>
   <% }) %>
@@ -59,8 +63,12 @@
 <form action="/stock/new" method="POST">
   <input type="hidden" value="<%= customer.id%>" name="owner"/>
   <input type="submit" value="Add stock" />
-</form>
+</form><br>
 <form action="/investment/new" method="POST">
   <input type="hidden" value="<%= customer.id%>" name="owner"/>
   <input type="submit" value="Add Investment" />
+</form><br>
+<form action="/customer/" method="POST">
+  <input type="hidden" value="<%= customer.id%>" name="owner"/>
+  <input type="submit" value="Back to Customer List" />
 </form>
