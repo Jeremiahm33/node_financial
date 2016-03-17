@@ -21,3 +21,8 @@ My application is at -->  http://sailsfinancial-williammiller.rhcloud.com/
 5) How could this assignment be improved?
 
   The only thing I could say to "adjust" this assignment is maybe spread out the implementation of so many new tools and computer languages. It took me quite a bit to get with it as far as the large amount of new utensils we were using. In no way could you improve it because I really appreciated the time to actually learn and not kamikaze my grade due to slower skills. Thank you.
+  
+I tried to upload the screenshots here without success. I turned them in a word .doc file so hope that is what I was supposed to do.
+
+
+   Thank you!
