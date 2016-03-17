@@ -3,15 +3,15 @@
 
   <input type="hidden" name="owner" value="<%- customer.id %>" />
 
-  <input type="text" placeholder="Category" name="category" ><br/>
-  <input type="text" placeholder="Description" name="description" ><br/>
-  <input type="text" placeholder="Acquired Value" name="acquired_value" ><br/>
-  <input type="text" placeholder="Acquired Date" name="acquired_date" ><br/>
-  <input type="text" placeholder="Recent Value" name="recent_value" ><br/>
+  <input type="text" placeholder="Category" name="category" ><br/><br>
+  <input type="text" placeholder="Description" name="description" ><br/><br>
+  <input type="text" placeholder="Acquired Value" name="acquired_value" ><br/><br>
+  <input type="text" placeholder="Acquired Date" name="acquired_date" ><br/><br>
+  <input type="text" placeholder="Recent Value" name="recent_value" ><br/><br>
   <input type="text" placeholder="Recent Date" name="recent_date" ><br/><br>
 
   <input type="submit" value="Add investment" />
 </form><br>
 <form action="/customer/show/<%= customer.id %>" method="POST">
-  <input type="submit" value="<-- Go Back" />
+  <input type="submit" style="float:right" value="<-- Go Back   " />
 </form>

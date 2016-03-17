@@ -3,13 +3,13 @@
 
   <input type="hidden" name="owner" value="<%- customer.id %>" />
 
-  <input type="text" placeholder="Symbol" name="symbol" ><br>
-  <input type="text" placeholder="Name" name="name"><br/>
-  <input type="text" placeholder="Price" name="price"><br/>
-  <input type="text" placeholder="Number of Shares" name="number_of_shares" ><br/>
+  <input type="text" placeholder="Symbol" name="symbol" ><br><br>
+  <input type="text" placeholder="Name" name="name"><br/><br>
+  <input type="text" placeholder="Price" name="price"><br/><br>
+  <input type="text" placeholder="Number of Shares" name="number_of_shares" ><br/><br>
   <input type="text" placeholder="Date Purchased" name="date_purchased"><br/><br>
   <input type="submit" value="Add Stock" />
 </form><br>
 <form action="/customer/show/<%= customer.id %>" method="POST">
-  <input type="submit" value="<-- Go Back" />
+  <input type="submit" style="float:right" value="<-- Go Back  " />
 </form>

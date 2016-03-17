@@ -1,13 +1,16 @@
 <form action="/investment/update/<%= investment.id %>" method="POST" >
-  <h2>Edit Stock</h2>
+  <h1>Edit Investments</h1>
   <input value="<%= investment.owner %>" type="hidden" name="owner" />
 
-  <input value="<%= investment.category %>" type="text" name="category" ><br />
-  <input value="<%= investment.description %>" type="text" name="description" ><br />
-  <input value="<%= investment.acquired_value %>" type="text" name="acquired_value" ><br />
-  <input value="<%= investment.acquired_date %>" type="text" name="acquired_date" ><br />
-  <input value="<%= investment.recent_value %>" type="text" name="recent_value" ><br />
-  <input value="<%= investment.recent_date %>" type="text" name="recent_date" ><br />
+  <input value="<%= investment.category %>" type="text" name="category" ><br /><br>
+  <input value="<%= investment.description %>" type="text" name="description" ><br /><br>
+  <input value="<%= investment.acquired_value %>" type="text" name="acquired_value" ><br /><br>
+  <input value="<%= investment.acquired_date %>" type="text" name="acquired_date" ><br /><br>
+  <input value="<%= investment.recent_value %>" type="text" name="recent_value" ><br /><br>
+  <input value="<%= investment.recent_date %>" type="text" name="recent_date" ><br /><br>
 
   <input type="submit" value="Edit stock" />
+</form>
+<form action="/customer/" method="POST">
+  <input type="submit" style="float:right" value="Customer List Here!  " />
 </form>
